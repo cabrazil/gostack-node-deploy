@@ -2,13 +2,13 @@ Arguments:
   /usr/bin/node /usr/share/yarn/bin/yarn.js add @type/cors
 
 PATH: 
-  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/cabrazil/android/sdk/emulator:/home/cabrazil/android/sdk/tools:/home/cabrazil/android/sdk/tools/bin:/home/cabrazil/android/sdk/platform-tools:/opt/android-studio/bin:/home/cabrazil/android/sdk/emulator:/home/cabrazil/android/sdk/tools:/home/cabrazil/android/sdk/tools/bin:/home/cabrazil/android/sdk/platform-tools:/opt/android-studio/bin
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/cabrazil/android/sdk/emulator:/home/cabrazil/android/sdk/tools:/home/cabrazil/android/sdk/tools/bin:/home/cabrazil/android/sdk/platform-tools:/opt/android-studio/bin
 
 Yarn version: 
   1.22.5
 
 Node version: 
-  12.18.3
+  12.18.4
 
 Platform: 
   linux x64
@@ -34,9 +34,9 @@ npm manifest:
     "license": "MIT",
     "scripts": {
       "build": "tsc",
-      "dev:server": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
-      "start": "ts-node src/index.ts",
-      "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
+      "dev:server": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/infra/http/server.ts",
+      "start": "ts-node src/shared/infra/http/index.ts",
+      "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
     },
     "dependencies": {
       "bcryptjs": "^2.4.3",
@@ -66,6 +66,7 @@ npm manifest:
       "eslint-plugin-prettier": "^3.1.4",
       "prettier": "^2.1.1",
       "ts-node-dev": "^1.0.0-pre.61",
+      "tsconfig-paths": "^3.9.0",
       "typescript": "^4.0.2"
     }
   }
