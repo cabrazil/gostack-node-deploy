@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
+import UserMap from '@modules/users/mappers/UserMap';
 
 import CreateUserService from '@modules/users/services/CreateUserService';
 
