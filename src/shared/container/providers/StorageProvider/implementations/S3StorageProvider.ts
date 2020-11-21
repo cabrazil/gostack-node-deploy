@@ -43,7 +43,7 @@ class DiskStorageProvider implements IStorageProvider {
   public async deleteFile(file: string): Promise<void> {
     await this.client
       .deleteObject({
-        Bucket: 'app-gobarber',
+        Bucket: 'app-gobarber-br',
         Key: file,
       })
       .promise();

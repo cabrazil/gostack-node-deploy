@@ -6,8 +6,6 @@ import IFindAllProvidersDTO from '@modules/users/dtos/IFindAllProvidersDTO';
 
 import User from '../entities/User';
 
-console.log('Passei em users...typeorm/repositories/UsersRepository');
-
 class UsersRepository implements IUsersRepository {
   private ormRepository: Repository<User>;
 
