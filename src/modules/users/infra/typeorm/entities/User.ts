@@ -35,7 +35,7 @@ class User {
   @Column()
   avatar: string;
 
-  @Expose({ name: 'avatar_url ' })
+  @Expose({ name: 'avatar_url' })
   getAvatarUrl(): string | null {
     if (!this.avatar) {
       return null;
