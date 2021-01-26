@@ -1,4 +1,3 @@
-import UpdateUserAvatarService from '@modules/users/services/UpdateUserAvatarService';
 import {
   ObjectID,
   Entity,

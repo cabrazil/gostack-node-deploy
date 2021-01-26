@@ -4,6 +4,7 @@ temp/
 coverage/
 .vscode/
 .idea/
+dist/
 .env
 ormconfig.json
 
